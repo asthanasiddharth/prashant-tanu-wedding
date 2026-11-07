@@ -1,0 +1,594 @@
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#310d0d;color:#f7e8cf;font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+
+.opening{position:fixed;inset:0;z-index:1000;overflow:hidden;background:#310d0d;transition:opacity .9s,visibility .9s}
+.opening.closed{opacity:0;visibility:hidden}
+
+
+/* WEDDING BACKGROUND IMAGE */
+
+
+/* =========================================
+   DESKTOP BACKGROUND
+========================================= */
+
+.opening-art {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    background-image: url("assets/Sunset Ganges Riverside Celebration.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   MOBILE BACKGROUND
+========================================= */
+
+@media (max-width: 600px) {
+
+    .opening-art {
+        background-image: url("assets/Sunset Romance at Banaras Ghats.png");
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+
+
+.opening-vignette{position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,5,4,.15),rgba(28,5,4,.58) 29%,rgba(28,5,4,.22) 52%,transparent 72%),linear-gradient(0deg,rgba(20,4,3,.15),transparent 45%)}
+
+.opening-content{position:absolute;left:27%;top:50%;transform:translateY(-50%);width:26%;min-width:310px;text-align:center;color:#f2d49c;text-shadow:0 2px 10px #210807}
+.om{font-size:28px;color:#d7ae68}
+.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase}
+.opening-content h1 {
+    font: 500 clamp(42px, 5.3vw, 76px)/0.88
+        "Cormorant Garamond", serif;
+    letter-spacing: 4px;
+    margin: 16px 0;
+}
+
+.opening-content h1 small {
+    display: block;
+    font-size: 0.52em;
+    font-style: italic;
+    margin: 0;
+    line-height: 0.7;
+}
+.script{font:italic 24px "Cormorant Garamond",serif}
+.gold-rule{display:block;width:70%;height:1px;background:#c79a50;margin:23px auto}
+.opening-date,.place{letter-spacing:4px;font-size:12px}
+.opening-date sup{font-size:8px}
+
+.enter-btn{margin-top:15px;border:1px solid #d6a75d;border-radius:40px;background:#4a100e;color:#f8e7c8;padding:13px 27px;letter-spacing:2px;cursor:pointer}
+.enter-btn:hover,.gold-btn:hover{background:#6a2018}
+.hint{font:italic 12px "Cormorant Garamond",serif}
+
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 5%;background:#310d0df2;border-bottom:1px solid #9b6a35;gap:18px}
+.monogram{font:28px "Cormorant Garamond",serif;letter-spacing:5px;color:#d8ae6b;white-space:nowrap}
+.monogram span{font-style:italic;font-size:.7em}
+
+nav{display:flex;align-items:center;gap:clamp(12px,3vw,42px)}
+nav a{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#e9d8bf;padding:8px 0;border-bottom:1px solid transparent}
+nav a:hover,nav a.active{border-color:#d7a75d;color:#f5d49b}
+
+.music-btn,.menu-toggle{background:transparent;color:#e8c27b;border:1px solid #a9793c;border-radius:50%;width:42px;height:42px;cursor:pointer;font-size:20px}
+.music-btn.playing{background:#8a512b}
+.menu-toggle{display:none}
+
+main section{position:relative;scroll-margin-top:70px}
+
+
+/* =========================================
+   INSIDE WEBSITE - HERO BACKGROUND
+========================================= */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    background-image:
+        linear-gradient(
+            rgba(35, 10, 8, 0.35),
+            rgba(35, 10, 8, 0.45)
+        ),
+        url("assets/Sunset Ganges Riverside Celebration.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+/* Keep the existing hero text above the background */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   MOBILE HERO BACKGROUND
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100vh;
+        min-height: 100dvh;
+
+        background-image:
+            linear-gradient(
+                rgba(35, 10, 8, 0.30),
+                rgba(35, 10, 8, 0.40)
+            ),
+            url("assets/Sunset Romance at Banaras Ghats.png");
+
+        background-repeat: no-repeat;
+
+        background-size: cover;
+
+        background-position: center center;
+    }
+
+}
+
+
+.hero-content{padding:60px 20px}
+.hero h2{font:500 clamp(48px,6vw,86px)/.9 "Cormorant Garamond",serif;letter-spacing:3px;margin:18px 0}
+.hero h2 i,.invite-copy h2 i,.footer h2 i{font-size:.6em}
+.hero .script{margin:12px}
+.ornament{color:#d2a25c;margin:20px}
+.hero-date{letter-spacing:4px}
+.outline-btn{display:inline-block;border:1px solid #d1a15a;border-radius:40px;padding:12px 24px;margin-top:22px;font-size:10px;letter-spacing:2px}
+.outline-btn span{margin-left:15px}
+
+.parchment{background:#f1dfbf;color:#421714}
+
+.invitation{min-height:330px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:linear-gradient(90deg,#ecd4ac,#f8e9d0 40%,#e9d0a9)}
+.invitation-art{position:absolute;inset:0;background:url("assets/invitation-reference.png") center/cover no-repeat;opacity:.22;mix-blend-mode:multiply}
+.invite-copy{position:relative;z-index:1;padding:45px 20px;max-width:720px}
+.invite-copy h2{font:italic 500 clamp(38px,5vw,66px) "Cormorant Garamond",serif;margin:12px}
+.invite-copy .script{font-size:22px}
+.invite-copy p:last-child{font:17px "Cormorant Garamond",serif}
+
+.side-art{position:absolute;top:50%;transform:translateY(-50%);font:24px/1.6 "Cormorant Garamond",serif;color:#7a3b1f;opacity:.7}
+.side-art.left{left:5%}
+.side-art.right{right:5%}
+
+
+/* ==========================================
+   BLESSING FROM KASHI
+   Golden Ganga Aarti Background
+========================================== */
+
+.blessing {
+    position: relative;
+
+    min-height: 300px;
+
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background-color: #3b1b12;
+
+    background-image:
+        linear-gradient(
+            rgba(43, 20, 12, 0.28),
+            rgba(43, 20, 12, 0.38)
+        ),
+        url("assets/image.png");
+
+    background-size: cover;
+    background-position: center 55%;
+    background-repeat: no-repeat;
+}
+
+/* Blessing content */
+
+.blessing .blessing-inner {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1000px;
+
+    padding: 35px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+/* Heading */
+
+.blessing .eyebrow.gold {
+    color: #f3cf8b;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    margin: 0 0 14px;
+}
+
+/* Hindi blessing */
+
+.blessing blockquote {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(26px, 3.2vw, 44px);
+    font-weight: 500;
+
+    line-height: 1.35;
+
+    color: #fff0d2;
+
+    margin: 12px 0;
+
+    text-shadow:
+        0 2px 8px rgba(30, 10, 5, 0.45);
+}
+
+/* Couple signature */
+
+.blessing .signature {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: #f3cf8b;
+
+    margin: 20px 0 0;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+    .blessing {
+        min-height: 270px;
+
+        background-position: 58% center;
+    }
+
+    .blessing .blessing-inner {
+        padding: 30px 16px;
+    }
+
+    .blessing .eyebrow.gold {
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .blessing blockquote {
+        font-size: 27px;
+        line-height: 1.4;
+    }
+
+    .blessing .signature {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+}
+
+
+.events{padding:55px 7%;text-align:center;background:linear-gradient(#310d0df5,#310d0df5),url("assets/events-reference.png") center/cover}
+.section-heading h2{font:italic 30px "Cormorant Garamond",serif;margin:10px}
+.event-grid{display:grid;grid-template-columns:repeat(2,minmax(240px,340px));justify-content:center;gap:28px;margin:30px auto}
+.event-board{border:1px solid #c99a4d;border-radius:18px;padding:24px;position:relative;background:#3b100ed9;box-shadow:inset 0 0 0 4px #3b100e,inset 0 0 0 5px #9e7037}
+.event-symbol{color:#d4a45b;font-size:24px}
+.event-board h3{font:28px "Cormorant Garamond",serif;margin:10px}
+.event-board p{font-size:11px;letter-spacing:2px}
+.event-board small{color:#d7ae6b}
+.route-btn{background:transparent;border:1px solid #c99a4d;color:#f0d6aa;padding:10px 16px;margin-top:12px;cursor:pointer;font-size:9px;letter-spacing:2px}
+.route-btn:hover{background:#6b2419}
+
+.instrument-decor{position:absolute;color:#9d6a32;opacity:.35;font-size:44px}
+.flute{left:4%;bottom:12%}
+.tabla{right:5%;bottom:12%}
+
+.story{padding:55px 8%}
+.story-layout{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;max-width:1100px;margin:auto}
+.story-art {
+    min-height: 300px;
+
+    display: grid;
+    place-items: center;
+
+    background-color: #3b1305;
+
+    background-image: url("assets/Golden Wedding Hashtag on Maroon Carpet.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    border: 8px solid #ead4b0;
+    box-shadow: 0 0 0 1px #9b6c3b;
+
+    box-sizing: border-box;
+}
+
+.story-art span {
+    display: none;
+}
+.story-copy h2,.keepsake-copy h2{font:50px "Cormorant Garamond",serif;margin:8px 0}
+.story-copy p:not(.eyebrow):not(.script){font:17px/1.8 "Cormorant Garamond",serif}
+
+.keepsake{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 12%;min-height:280px;background:linear-gradient(90deg,#f4e5cc,#ead1aa)}
+.keepsake-copy p:not(.eyebrow){font:17px/1.6 "Cormorant Garamond",serif}
+.save-date{letter-spacing:2px;font-size:11px!important}
+.save-date span{color:#a66b2b;margin:0 10px}
+.keepsake-photo{min-height:190px;display:grid;place-items:center;border:7px solid #f8ebd5;outline:1px solid #a77a43;background:linear-gradient(#41100c66,#41100c66),url("assets/keepsake-reference.png") center/cover}
+.keepsake-photo span{font:italic 32px "Cormorant Garamond",serif;text-align:center;color:#f8dfb4}
+
+.gallery{padding:50px 8%;text-align:center;background:#310d0d}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}
+.gallery-tile{min-height:170px;border:1px solid #b78242;color:#f5dfba;cursor:pointer;background:linear-gradient(#32100a55,#32100a99),url("assets/keepsake-reference.png") center/cover;display:flex;align-items:end;justify-content:center;padding:14px;font:italic 19px "Cormorant Garamond",serif}
+.tile-two{background-position:70% center}
+.tile-three{background-image:linear-gradient(#32100a55,#32100a99),url("assets/events-reference.png")}
+.tile-four{background-image:linear-gradient(#32100a55,#32100a99),url("assets/Sunset%20Ganges%20Riverside%20Celebration.png")}
+
+.family{text-align:center;padding:40px 15px}
+.family h2{font:38px "Cormorant Garamond",serif;margin:10px}
+
+.countdown-band{display:flex;align-items:center;justify-content:space-around;gap:20px;padding:24px 6%;background:linear-gradient(90deg,#f3e3c8,#ead1a9)}
+.count-quote{text-align:center;font:19px "Cormorant Garamond",serif}
+.countdown-wrap{text-align:center}
+.countdown{display:flex;gap:18px}
+.countdown div{display:grid;gap:4px}
+.countdown strong{font:28px "Cormorant Garamond",serif}
+.countdown span{font-size:8px;letter-spacing:1px;text-transform:uppercase}
+
+.whatsapp-btn{display:flex;align-items:center;gap:10px;background:#4b110e;color:#f8dfb4;padding:12px 18px;border-radius:8px;font-size:10px;letter-spacing:1px}
+.whatsapp-btn small{display:block;font:italic 12px "Cormorant Garamond",serif;letter-spacing:0}
+
+.footer{text-align:center;padding:35px 15px;background:#310d0d}
+.footer h2{font:40px "Cormorant Garamond",serif;margin:8px}
+.footer p{font-size:12px;letter-spacing:1px}
+.footer>a{display:block;color:#d7ae6b;margin:15px}
+.footer small{display:block;color:#b99771;font:italic 12px "Cormorant Garamond",serif}
+
+.route-modal,.lightbox{position:fixed;inset:0;z-index:200;display:none;place-items:center;background:#170605d9;padding:20px}
+.route-modal.open,.lightbox.open{display:grid}
+.modal-card{position:relative;background:#f0dfbf;color:#421714;padding:35px;text-align:center;max-width:440px;width:100%;border:1px solid #b9823f}
+.modal-close,.lightbox button{position:absolute;right:12px;top:8px;background:transparent;border:0;color:inherit;font-size:30px;cursor:pointer}
+.gold-btn{display:inline-block;background:#4a100e;color:#f8dfb4;padding:12px 20px;margin-top:15px;font-size:10px;letter-spacing:2px}
+.lightbox{color:#f8dfb4}
+.lightbox p{font:italic 24px "Cormorant Garamond",serif}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:800px){
+.nav{padding:10px 4%}
+.menu-toggle{display:block;order:2}
+.music-btn{order:3}
+.nav nav{display:none;position:absolute;top:100%;left:0;right:0;background:#310d0d;padding:18px;flex-direction:column;border-bottom:1px solid #9b6a35}
+.nav nav.open{display:flex}
+.opening-art{background-position:55% center}
+.opening-vignette{background:linear-gradient(90deg,#220806b8,#22080675 60%,#22080620)}
+.opening-content{left:5%;width:90%;min-width:0}
+.opening-content h1{font-size:54px}
+.side-art{display:none}
+.event-grid{grid-template-columns:1fr}
+.story-layout,.keepsake{grid-template-columns:1fr}
+.story-art {
+    min-height: 240px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-width: 5px;
+}
+.gallery-grid{grid-template-columns:repeat(2,1fr)}
+.countdown-band{flex-direction:column;text-align:center}
+.count-quote{display:none}
+.countdown{gap:14px}
+.hero{min-height:480px;background-position:58% center}
+.hero-content{background:#2a0909a6;padding:30px 15px}
+.invite-copy{padding:40px 12px}
+.invitation-art{background-position:center}
+.keepsake{padding:35px 8%}
+.keepsake-photo{min-height:180px}
+}
+
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+
+/* Couple names - control spacing independently */
+.opening-content h1.couple-names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    line-height: normal;
+    margin: 16px 0;
+}
+
+/* Prashant */
+.opening-content h1 .name-prashant {
+    line-height: 0.85;
+}
+
+/* Ampersand */
+.opening-content h1.couple-names small {
+    display: block;
+    font-size: 0.52em;
+    font-style: italic;
+
+    margin: 0;
+    line-height: 0.8;
+}
+
+/* Tanu */
+.opening-content h1 .name-tanu {
+    line-height: 0.85;
+}
+
+
+/* ==========================================
+   RESPONSIVE WEDDING BACKGROUND
+========================================== */
+
+/* Laptop */
+
+@media (min-width: 601px) {
+
+    .opening-art {
+        background-size: cover;
+        background-position: center center;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .opening-art {
+        background-size: auto 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+}
+
+/* Small mobile */
+
+@media (max-width: 380px) {
+
+    .opening-art {
+        background-size: auto 100%;
+        background-position: center center;
+    }
+
+}
+
+
+/* Save the Date - color changes only */
+.keepsake {
+    background: #3a100e;
+    color: #f3dfbd;
+}
+
+/* Heading */
+.keepsake-copy h2 {
+    color: #f3dfbd;
+}
+
+/* Description */
+.keepsake-copy p {
+    color: #e8d2b0;
+}
+
+/* Small heading */
+.keepsake-copy .eyebrow {
+    color: #d8ae6b;
+}
+
+/* Date and location */
+.keepsake-copy .save-date {
+    color: #d8ae6b;
+}
+
+/* Image frame */
+.keepsake-photo {
+    border-color: #d8ae6b;
+}
+
+/* ==========================================
+   WEDDING EVENT CARDS - BACKGROUND IMAGES
+========================================== */
+
+.event-board {
+    position: relative;
+    overflow: hidden;
+
+    background-color: #3b100e;
+
+    background-image:
+        linear-gradient(
+            rgba(49, 13, 13, 0.72),
+            rgba(49, 13, 13, 0.82)
+        ),
+        var(--event-image);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Keep existing event content above background */
+
+.event-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Haldi */
+
+.event-board-1 {
+    background-position: center;
+}
+
+/* Wedding */
+
+.event-board-2 {
+    background-position: center;
+}
+
+/* Reception */
+
+.event-board-3 {
+    background-position: center;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .event-board {
+        background-size: cover;
+        background-position: center;
+    }
+
+}
