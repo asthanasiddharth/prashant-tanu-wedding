@@ -4,7 +4,7 @@
 ========================================== */
 
 const WEDDING = {
-  weddingDate: '2026-11-30T18:00:00+05:30',
+  weddingDate: '2026-11-30T10:00:00+05:30',
 
   whatsapp: '91XXXXXXXXXX',
 
