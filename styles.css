@@ -352,7 +352,7 @@ main section{position:relative;scroll-margin-top:70px}
 
 .keepsake{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:40px 12%;min-height:280px;background:linear-gradient(90deg,#f4e5cc,#ead1aa)}
 .keepsake-copy p:not(.eyebrow){font:17px/1.6 "Cormorant Garamond",serif}
-.save-date{letter-spacing:2px;font-size:11px!important}
+.save-date{letter-spacing:2px;font-size:18px!important}
 .save-date span{color:#a66b2b;margin:0 10px}
 .keepsake-photo{min-height:190px;display:grid;place-items:center;border:7px solid #f8ebd5;outline:1px solid #a77a43;background:linear-gradient(#41100c66,#41100c66),url("assets/keepsake-reference.png") center/cover}
 .keepsake-photo span{font:italic 32px "Cormorant Garamond",serif;text-align:center;color:#f8dfb4}

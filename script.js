@@ -10,7 +10,7 @@ const WEDDING = {
 
   events: [
       {
-          name: 'The Haldi Ceremony',
+          name: 'Sunehri Rasam  <br> (Haldi by the Ganga )',
           date: '30 November 2026',
           time: '10AM Onwards',
           venue: 'Guleria Kothi Hotel, Varanasi, Uttar Pradesh',
